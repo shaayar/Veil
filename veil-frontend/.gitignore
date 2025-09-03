@@ -1,0 +1,45 @@
+# -------------------------------
+# Node Modules
+# -------------------------------
+node_modules/
+# -------------------------------
+# Build Outputs
+# -------------------------------
+dist/
+build/
+.cache/
+out/
+
+# -------------------------------
+# Environment Files
+# -------------------------------
+.env
+.env.*.local
+.env.local
+
+# -------------------------------
+# Vite / PWA Generated Files
+# -------------------------------
+.vite/
+*.vite.config.js.timestamp*
+veil-frontend/public/sw.js
+veil-frontend/public/workbox-*.js
+veil-frontend/public/manifest.webmanifest
+
+# -------------------------------
+# Lint & Formatter Cache
+# -------------------------------
+.eslintcache
+.prettiercache
+
+# -------------------------------
+# Logs
+# -------------------------------
+*.log
+logs
+
+# -------------------------------
+# Test Coverage
+# -------------------------------
+coverage/
+*.lcov

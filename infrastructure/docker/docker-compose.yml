@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  frontend:
+    build: ./veil-frontend
+    ports:
+      - "3000:3000"
+    command: npm run dev
+    volumes:
+      - ./veil-frontend:/app
+      - /app/node_modules
+
+  backend:
+    build: ./veil-backend
+    ports:
+      - "5000:5000"
+    command: npm run dev
+    volumes:
+      - ./veil-backend:/app
+      - /app/node_modules
+    environment:
+      - REDIS_HOST=redis
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
